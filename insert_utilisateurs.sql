@@ -1,3 +1,4 @@
+-- INSERT utilisateurs
 INSERT INTO `utilisateurs` (`email`,`password`,`nom`,`prenom`,`roles_id`) VALUES ('erat.Sed@laoreet.com','JQX07SNS2RE','Phillips','Hunter','1');
 INSERT INTO `utilisateurs` (`email`,`password`,`nom`,`prenom`,`roles_id`) VALUES ('auctor.quis@libero.edu','GJX68HKH3QF','Sloan','Yolanda','2');
 INSERT INTO `utilisateurs` (`email`,`password`,`nom`,`prenom`,`roles_id`) VALUES ('Fusce.dolor.quam@utodio.org','GRG44RPU0XW','Clarke','Caesar','1');
