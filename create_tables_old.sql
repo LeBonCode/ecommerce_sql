@@ -221,7 +221,7 @@ DROP TABLE IF EXISTS `mydb`.`categories` ;
 CREATE  TABLE IF NOT EXISTS `mydb`.`categories` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `libelle` VARCHAR(45) NULL ,
-  `categories_id` INT NULL ,
+  `categories_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_categories_categories1` (`categories_id` ASC) ,
   CONSTRAINT `fk_categories_categories1`
