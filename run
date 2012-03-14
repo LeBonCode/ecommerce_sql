@@ -24,5 +24,8 @@ mysql -h localhost --user=root --password=root < insert_cartes_credit.sql >> mys
 echo "insert categories"
 mysql -h localhost --user=root --password=root < insert_categories.sql >> mysql.out
 
+echo "insert etapes"
+mysql -h localhost --user=root --password=root < insert_etapes.sql >> mysql.out
+
 echo "Tout est OK"
 echo "Les logs sont dans mysql.out"
