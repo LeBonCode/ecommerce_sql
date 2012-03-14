@@ -1,5 +1,5 @@
 USE mydb;
-INSERT INTO `cartes_credit` (`ìd`, `numero`,`date_expiration`,`code_securite`,`utilisateurs_id`) 
+INSERT INTO `cartes_credit` (`id`, `numero`,`date_expiration`,`code_securite`,`utilisateurs_id`) 
 VALUES 	(1, '5785800652578474','2013-08-21 05:02:49','650','1'),
  		(2, '9311879423912616','2013-01-30 06:15:40','491','2'),
  		(3, '1978533484041690','2013-12-13 12:36:15','830','3'),
