@@ -1,3 +1,3 @@
 -- INSERT roles
-INSERT INTO `roles` (`libelle`) VALUES ('utilisateur');
-INSERT INTO `roles` (`libelle`) VALUES ('admin');
+INSERT INTO `roles` (`id`,`libelle`) VALUES (1,'utilisateur');
+INSERT INTO `roles` (`id`,`libelle`) VALUES (2,'admin');
