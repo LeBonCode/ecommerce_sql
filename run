@@ -12,5 +12,14 @@ mysql -h localhost --user=root --password=root < insert_roles.sql >> mysql.out
 echo "insert utilisateurs"
 mysql -h localhost --user=root --password=root < insert_utilisateurs.sql >> mysql.out
 
+echo "insert pays"
+mysql -h localhost --user=root --password=root < insert_pays.sql >> mysql.out
+
+echo "insert adresses"
+mysql -h localhost --user=root --password=root < insert_adresses.sql >> mysql.out
+
+echo "insert cartes_credit"
+mysql -h localhost --user=root --password=root < insert_cartes_credit.sql >> mysql.out
+
 echo "Tout est OK"
 echo "Les logs sont dans mysql.out"
