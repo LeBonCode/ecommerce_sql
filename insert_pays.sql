@@ -1,20 +1,22 @@
 USE mydb;
-INSERT INTO `pays` (`id`,`libelle`) VALUES (1,'France');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (2,'Paraguay');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (3,'Uruguay');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (4,'Espagne');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (5,'Italie');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (6,'Portugal');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (7,'Belgique');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (8,'Irlande');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (9,'Pologne');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (10,'Ukraine');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (11,'Russie');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (12,'Japon');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (13,'Australie');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (14,'Mexique');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (15,'Brésil');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (16,'Chine');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (17,'Canada');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (18,'Nigeria');
-INSERT INTO `pays` (`id`,`libelle`) VALUES (19,'Inde');
+INSERT INTO `pays` (`id`,`libelle`) 
+VALUES 	(1,'France'),
+		(2,'Paraguay'),
+		(3,'Uruguay'),
+		(4,'Espagne'),
+		(5,'Italie'),
+		(6,'Portugal'),
+		(7,'Belgique'),
+		(8,'Irlande'),
+		(9,'Pologne'),
+		(10,'Ukraine'),
+		(11,'Russie'),
+		(12,'Japon'),
+		(13,'Australie'),
+		(14,'Mexique'),
+		(15,'Brésil'),
+		(16,'Chine'),
+		(17,'Canada'),
+		(18,'Nigeria'),
+		(19,'Inde');
+SHOW WARNINGS;

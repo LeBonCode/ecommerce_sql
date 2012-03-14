@@ -30,5 +30,7 @@ mysql -h localhost --user=root --password=root < insert_etapes.sql >> mysql.out
 echo "insert methodes_livraison"
 mysql -h localhost --user=root --password=root < insert_methodes_livraison.sql >> mysql.out
 
+
+
 echo "Tout est OK"
 echo "Les logs sont dans mysql.out"
