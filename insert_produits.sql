@@ -1,3 +1,4 @@
+USE mydb;
 INSERT INTO `produits` (`libelle`,`description`,`prix`,`categories_id`) VALUES ('et,','elit erat vitae risus. Duis a mi fringilla','438','2');
 INSERT INTO `produits` (`libelle`,`description`,`prix`,`categories_id`) VALUES ('luctus','Etiam gravida molestie arcu. Sed eu','100','3');
 INSERT INTO `produits` (`libelle`,`description`,`prix`,`categories_id`) VALUES ('quis,','feugiat. Sed nec metus facilisis lorem','379','4');

@@ -1,4 +1,4 @@
--- INSERT pays
+USE mydb;
 INSERT INTO `pays` (`id`,`libelle`) VALUES (1,'France');
 INSERT INTO `pays` (`id`,`libelle`) VALUES (2,'Paraguay');
 INSERT INTO `pays` (`id`,`libelle`) VALUES (3,'Uruguay');

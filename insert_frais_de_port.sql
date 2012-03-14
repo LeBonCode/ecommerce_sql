@@ -1,4 +1,4 @@
--- INSERT frais_de_port
+USE mydb;
 /*France*/
 INSERT INTO `frais_de_port` (`ìd`, `tarif`, `methodes_livraison_id`, `pays_id`) VALUES (1, 10, 1, 1);
 INSERT INTO `frais_de_port` (`ìd`, `tarif`, `methodes_livraison_id`, `pays_id`) VALUES (2, 5, 2, 1);

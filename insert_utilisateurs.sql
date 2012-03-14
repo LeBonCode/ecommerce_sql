@@ -1,3 +1,4 @@
+USE mydb;
 INSERT INTO `utilisateurs` (`id`, `email`,`password`,`nom`,`prenom`,`roles_id`) VALUES (1, 'erat.Sed@laoreet.com','JQX07SNS2RE','Phillips','Hunter','1');
 SHOW WARNINGS;
 INSERT INTO `utilisateurs` (`id`, `email`,`password`,`nom`,`prenom`,`roles_id`) VALUES (2, 'auctor.quis@libero.edu','GJX68HKH3QF','Sloan','Yolanda','2');

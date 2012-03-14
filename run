@@ -1,9 +1,16 @@
 #!/bin/bash
-# creation du schema
-mysql -h localhost --user=root --password=root mydb < create_tables.sql > mysql.out
 
-# insert roles
-mysql -h localhost --user=root --password=root mydb < insert_roles.sql > mysql.out
+echo "effacer les logs"
+rm mysql.out
 
-# insert utilisateurs
-mysql -h localhost --user=root --password=root mydb < insert_utilisateurs.sql > mysql.out
+echo "creation du schema"
+mysql -h localhost --user=root --password=root < create_tables.sql >> mysql.out
+
+echo "insert roles"
+mysql -h localhost --user=root --password=root < insert_roles.sql >> mysql.out
+
+echo "insert utilisateurs"
+mysql -h localhost --user=root --password=root < insert_utilisateurs.sql >> mysql.out
+
+echo "Tout est OK"
+echo "Les logs sont dans mysql.out"

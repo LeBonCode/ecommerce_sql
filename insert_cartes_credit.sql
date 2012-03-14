@@ -1,3 +1,4 @@
+USE mydb;
 INSERT INTO `cartes_credit` (`numero`,`date_expiration`,`code_securite`,`utilisateurs_id`) VALUES ('5785800652578474','2013-08-21 05:02:49','650','1');
 INSERT INTO `cartes_credit` (`numero`,`date_expiration`,`code_securite`,`utilisateurs_id`) VALUES ('9311879423912616','2013-01-30 06:15:40','491','2');
 INSERT INTO `cartes_credit` (`numero`,`date_expiration`,`code_securite`,`utilisateurs_id`) VALUES ('1978533484041690','2013-12-13 12:36:15','830','3');

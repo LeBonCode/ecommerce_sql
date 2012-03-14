@@ -1,4 +1,4 @@
--- INSERT adresses
+USE mydb;
 INSERT INTO `adresses` (`numero`,`voie`,`cp`,`ville`,`utilisateurs_id`,`pays_id`) VALUES ('56','6509 Ligula. Road','M6D 3B3','Frederiksted','1','3');
 INSERT INTO `adresses` (`numero`,`voie`,`cp`,`ville`,`utilisateurs_id`,`pays_id`) VALUES ('94','8816 Etiam Road','W5G 3F1','Ephraim','2','1');
 INSERT INTO `adresses` (`numero`,`voie`,`cp`,`ville`,`utilisateurs_id`,`pays_id`) VALUES ('50','P.O. Box 204, 3264 Non, Avenue','T3J 4J7','Honolulu','3','3');
