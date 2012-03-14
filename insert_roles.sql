@@ -1,4 +1,4 @@
-INSERT INTO `roles` (`libelle`) VALUES ('utilisateur');
+INSERT INTO `roles` (`id`,`libelle`) VALUES (1,'utilisateur');
 SHOW WARNINGS;
-INSERT INTO `roles` (`libelle`) VALUES ('admin');
+INSERT INTO `roles` (`id`,`libelle`) VALUES (2,'admin');
 SHOW WARNINGS;
