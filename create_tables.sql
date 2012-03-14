@@ -101,18 +101,11 @@ DROP TABLE IF EXISTS `mydb`.`commandes` ;
 CREATE  TABLE IF NOT EXISTS `mydb`.`commandes` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `date` DATETIME NULL ,
-  `utilisateurs_id` INT NOT NULL ,
   `methodes_livraison_id` INT NOT NULL ,
   `adresses_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
-  INDEX `fk_commandes_utilisateurs1` (`utilisateurs_id` ASC) ,
   INDEX `fk_commandes_methodes_livraison1` (`methodes_livraison_id` ASC) ,
   INDEX `fk_commandes_adresses1` (`adresses_id` ASC) ,
-  CONSTRAINT `fk_commandes_utilisateurs1`
-    FOREIGN KEY (`utilisateurs_id` )
-    REFERENCES `mydb`.`utilisateurs` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_commandes_methodes_livraison1`
     FOREIGN KEY (`methodes_livraison_id` )
     REFERENCES `mydb`.`methodes_livraison` (`id` )
@@ -322,30 +315,6 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons_has_produits` (
   CONSTRAINT `fk_livraisons_has_produits_produits1`
     FOREIGN KEY (`produits_id` )
     REFERENCES `mydb`.`produits` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`commandes_has_etapes`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`commandes_has_etapes` ;
-
-CREATE  TABLE IF NOT EXISTS `mydb`.`commandes_has_etapes` (
-  `commandes_id` INT NOT NULL ,
-  `etapes_id` INT NOT NULL ,
-  `date` DATETIME NULL ,
-  INDEX `fk_commandes_has_etapes_etapes1` (`etapes_id` ASC) ,
-  INDEX `fk_commandes_has_etapes_commandes1` (`commandes_id` ASC) ,
-  CONSTRAINT `fk_commandes_has_etapes_commandes1`
-    FOREIGN KEY (`commandes_id` )
-    REFERENCES `mydb`.`commandes` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_commandes_has_etapes_etapes1`
-    FOREIGN KEY (`etapes_id` )
-    REFERENCES `mydb`.`etapes` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
