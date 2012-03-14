@@ -1,0 +1,32 @@
+Level	Code	Message
+Note	1051	Unknown table 'roles'
+Level	Code	Message
+Note	1051	Unknown table 'utilisateurs'
+Level	Code	Message
+Note	1051	Unknown table 'pays'
+Level	Code	Message
+Note	1051	Unknown table 'adresses'
+Level	Code	Message
+Note	1051	Unknown table 'methodes_livraison'
+Level	Code	Message
+Note	1051	Unknown table 'commandes'
+Level	Code	Message
+Note	1051	Unknown table 'livraisons'
+Level	Code	Message
+Note	1051	Unknown table 'etapes'
+Level	Code	Message
+Note	1051	Unknown table 'cartes_credit'
+Level	Code	Message
+Note	1051	Unknown table 'paiements'
+Level	Code	Message
+Note	1051	Unknown table 'categories'
+Level	Code	Message
+Note	1051	Unknown table 'produits'
+Level	Code	Message
+Note	1051	Unknown table 'frais_de_port'
+Level	Code	Message
+Note	1051	Unknown table 'commandes_has_produits'
+Level	Code	Message
+Note	1051	Unknown table 'livraisons_has_produits'
+Level	Code	Message
+Note	1051	Unknown table 'livraisons_has_etapes'

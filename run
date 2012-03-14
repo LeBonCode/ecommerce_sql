@@ -1,0 +1,9 @@
+#!/bin/bash
+# creation du schema
+mysql -h localhost --user=root --password=root mydb < create_tables.sql > mysql.out
+
+# insert roles
+mysql -h localhost --user=root --password=root mydb < insert_roles.sql > mysql.out
+
+# insert utilisateurs
+mysql -h localhost --user=root --password=root mydb < insert_utilisateurs.sql > mysql.out

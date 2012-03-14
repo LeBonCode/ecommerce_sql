@@ -4,6 +4,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
 DROP SCHEMA IF EXISTS `mydb` ;
 CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+SHOW WARNINGS;
 USE `mydb` ;
 
 -- -----------------------------------------------------
@@ -11,18 +12,21 @@ USE `mydb` ;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`roles` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`roles` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `libelle` VARCHAR(45) NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`utilisateurs`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`utilisateurs` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`utilisateurs` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `email` VARCHAR(45) NULL ,
@@ -39,24 +43,28 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`utilisateurs` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`pays`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`pays` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`pays` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `libelle` VARCHAR(45) NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`adresses`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`adresses` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`adresses` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `numero` VARCHAR(45) NULL ,
@@ -80,24 +88,28 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`adresses` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`methodes_livraison`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`methodes_livraison` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`methodes_livraison` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `libelle` VARCHAR(45) NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`commandes`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`commandes` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`commandes` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `date` DATETIME NULL ,
@@ -118,12 +130,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`commandes` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`livraisons`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`livraisons` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `date_expedition` DATETIME NULL ,
@@ -145,24 +159,28 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`etapes`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`etapes` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`etapes` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `libelle` VARCHAR(45) NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`cartes_credit`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`cartes_credit` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`cartes_credit` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `numero` VARCHAR(45) NOT NULL ,
@@ -178,12 +196,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`cartes_credit` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`paiements`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`paiements` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`paiements` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `date` DATETIME NULL ,
@@ -205,12 +225,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`paiements` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`categories`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`categories` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`categories` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `libelle` VARCHAR(45) NULL ,
@@ -224,12 +246,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`categories` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`produits`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`produits` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`produits` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `libelle` VARCHAR(45) NULL ,
@@ -245,12 +269,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`produits` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`frais_de_port`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`frais_de_port` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`frais_de_port` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `tarif` DECIMAL(10,2) NULL ,
@@ -271,12 +297,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`frais_de_port` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`commandes_has_produits`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`commandes_has_produits` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`commandes_has_produits` (
   `commandes_id` INT NOT NULL ,
   `produits_id` INT NOT NULL ,
@@ -295,12 +323,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`commandes_has_produits` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`livraisons_has_produits`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`livraisons_has_produits` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons_has_produits` (
   `livraisons_id` INT NOT NULL ,
   `produits_id` INT NOT NULL ,
@@ -319,12 +349,14 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons_has_produits` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`livraisons_has_etapes`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`livraisons_has_etapes` ;
 
+SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons_has_etapes` (
   `livraisons_id` INT NOT NULL ,
   `etapes_id` INT NOT NULL ,
@@ -343,6 +375,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons_has_etapes` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+SHOW WARNINGS;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
