@@ -1,7 +1,7 @@
 USE mydb;
 INSERT INTO `utilisateurs` (`id`, `email`,`password`,`nom`,`prenom`,`roles_id`) 
 VALUES 	(1, 'erat.Sed@laoreet.com','JQX07SNS2RE','Phillips','Hunter','1'),
-		(2, 'auctor.quis@libero.edu','GJX68HKH3QF','Sloan','Yolanda','2')
+		(2, 'auctor.quis@libero.edu','GJX68HKH3QF','Sloan','Yolanda','2'),
 		(3, 'Fusce.dolor.quam@utodio.org','GRG44RPU0XW','Clarke','Caesar','1'),
 		(4, 'purus@Nam.edu','JUV56VKJ8YV','Hess','Colton','2'),
 		(5, 'Aenean.eget@ornarefacilisiseget.edu','SID55GUP0WZ','Flores','Colorado','2'),

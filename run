@@ -1,36 +1,50 @@
 #!/bin/bash
 
+growlnotify -m "effacer les logs" 
 echo "effacer les logs"
 rm mysql.out
 
+growlnotify -m "creation du schema"
 echo "creation du schema"
 mysql -h localhost --user=root --password=root < create_tables.sql >> mysql.out
 
+growlnotify -m "insert roles"
 echo "insert roles"
 mysql -h localhost --user=root --password=root < insert_roles.sql >> mysql.out
 
+growlnotify -m "insert utilisateurs"
 echo "insert utilisateurs"
 mysql -h localhost --user=root --password=root < insert_utilisateurs.sql >> mysql.out
 
+growlnotify -m "insert pays"
 echo "insert pays"
 mysql -h localhost --user=root --password=root < insert_pays.sql >> mysql.out
 
+growlnotify -m "insert adresses"
 echo "insert adresses"
 mysql -h localhost --user=root --password=root < insert_adresses.sql >> mysql.out
 
+growlnotify -m "insert cartes_credit"
 echo "insert cartes_credit"
 mysql -h localhost --user=root --password=root < insert_cartes_credit.sql >> mysql.out
 
+growlnotify -m "insert categories"
 echo "insert categories"
 mysql -h localhost --user=root --password=root < insert_categories.sql >> mysql.out
 
+growlnotify -m "insert etapes"
 echo "insert etapes"
 mysql -h localhost --user=root --password=root < insert_etapes.sql >> mysql.out
 
+growlnotify -m "insert methodes_livraison"
 echo "insert methodes_livraison"
 mysql -h localhost --user=root --password=root < insert_methodes_livraison.sql >> mysql.out
 
+growlnotify -m "insert frais_de_port"
+echo "insert frais_de_port"
+mysql -h localhost --user=root --password=root < insert_frais_de_port.sql >> mysql.out
 
-
+growlnotify -m "Tout est OK"
 echo "Tout est OK"
+growlnotify -m "Les logs sont dans mysql.out"
 echo "Les logs sont dans mysql.out"

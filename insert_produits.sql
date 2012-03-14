@@ -100,3 +100,4 @@ VALUES 	(1,'et,','elit erat vitae risus. Duis a mi fringilla','438','2'),
 		(98,'dictum','nascetur ridiculus mus. Proin vel arcu eu odio tristique','235','3'),
 		(99,'sit','commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa','270','2'),
 		(100,'lobortis','Vivamus sit amet risus. Donec','42','4');
+SHOW WARNINGS;
