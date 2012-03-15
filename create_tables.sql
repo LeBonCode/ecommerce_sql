@@ -114,17 +114,24 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`commandes` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `date` DATETIME NULL ,
   `methodes_livraison_id` INT NOT NULL ,
-  `adresses_id` INT NOT NULL ,
+  `adresses_livraison_id` INT NOT NULL ,
+  `adresses_facturation_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_commandes_methodes_livraison1` (`methodes_livraison_id` ASC) ,
-  INDEX `fk_commandes_adresses1` (`adresses_id` ASC) ,
+  INDEX `fk_commandes_adresses1` (`adresses_livraison_id` ASC) ,
+  INDEX `fk_commandes_adresses2` (`adresses_facturation_id` ASC) ,
   CONSTRAINT `fk_commandes_methodes_livraison1`
     FOREIGN KEY (`methodes_livraison_id` )
     REFERENCES `mydb`.`methodes_livraison` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_commandes_adresses1`
-    FOREIGN KEY (`adresses_id` )
+    FOREIGN KEY (`adresses_livraison_id` )
+    REFERENCES `mydb`.`adresses` (`id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_commandes_adresses2`
+    FOREIGN KEY (`adresses_facturation_id` )
     REFERENCES `mydb`.`adresses` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -141,20 +148,12 @@ SHOW WARNINGS;
 CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `date_expedition` DATETIME NULL ,
-  `date_reception` DATETIME NULL ,
   `commandes_id` INT NOT NULL ,
-  `adresses_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_livraisons_commandes1` (`commandes_id` ASC) ,
-  INDEX `fk_livraisons_adresses1` (`adresses_id` ASC) ,
   CONSTRAINT `fk_livraisons_commandes1`
     FOREIGN KEY (`commandes_id` )
     REFERENCES `mydb`.`commandes` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_livraisons_adresses1`
-    FOREIGN KEY (`adresses_id` )
-    REFERENCES `mydb`.`adresses` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
