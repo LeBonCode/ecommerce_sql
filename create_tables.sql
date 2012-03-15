@@ -194,7 +194,6 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`paiements` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `date` DATETIME NULL ,
   `commandes_id` INT NOT NULL ,
-  `methodes_paiement_id` INT NOT NULL ,
   `cartes_credit_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_paiements_commandes1` (`commandes_id` ASC) ,
