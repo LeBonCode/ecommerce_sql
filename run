@@ -52,6 +52,10 @@ growlnotify -m "insert commandes_has_produits"
 echo "insert commandes_has_produits"
 mysql -h localhost --user=root --password=root < insert_commandes_has_produits.sql >> mysql.out
 
+growlnotify -m "insert livraisons"
+echo "insert livraisons"
+mysql -h localhost --user=root --password=root < insert_livraisons.sql >> mysql.out
+
 growlnotify -m "Tout est OK"
 echo "Tout est OK"
 growlnotify -m "Les logs sont dans mysql.out"
