@@ -1,5 +1,5 @@
 USE mydb;
-INSERT INTO `produits` (`ìd`,`libelle`,`description`,`prix`,`categories_id`) 
+INSERT INTO `produits` (`id`,`libelle`,`description`,`prix`,`categories_id`) 
 VALUES 	(1,'et,','elit erat vitae risus. Duis a mi fringilla','438','2'),
 		(2,'luctus','Etiam gravida molestie arcu. Sed eu','100','3'),
 		(3,'quis,','feugiat. Sed nec metus facilisis lorem','379','4'),
