@@ -187,6 +187,7 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`cartes_credit` (
   `date_expiration` DATETIME NOT NULL ,
   `code_securite` VARCHAR(45) NOT NULL ,
   `utilisateurs_id` INT NOT NULL ,
+  `nom_titulaire` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_cartes_credit_utilisateurs1` (`utilisateurs_id` ASC) ,
   CONSTRAINT `fk_cartes_credit_utilisateurs1`
