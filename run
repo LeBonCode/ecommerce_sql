@@ -36,10 +36,6 @@ growlnotify -m "insert produits"
 echo "insert produits"
 mysql -h localhost --user=root --password=root < insert_produits.sql >> mysql.out
 
-growlnotify -m "insert etapes"
-echo "insert etapes"
-mysql -h localhost --user=root --password=root < insert_etapes.sql >> mysql.out
-
 growlnotify -m "insert methodes_livraison"
 echo "insert methodes_livraison"
 mysql -h localhost --user=root --password=root < insert_methodes_livraison.sql >> mysql.out
