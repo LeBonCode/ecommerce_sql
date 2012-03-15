@@ -162,20 +162,6 @@ ENGINE = InnoDB;
 SHOW WARNINGS;
 
 -- -----------------------------------------------------
--- Table `mydb`.`etapes`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`etapes` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `mydb`.`etapes` (
-  `id` INT NOT NULL AUTO_INCREMENT ,
-  `libelle` VARCHAR(45) NULL ,
-  PRIMARY KEY (`id`) )
-ENGINE = InnoDB;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
 -- Table `mydb`.`cartes_credit`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`cartes_credit` ;
@@ -346,32 +332,6 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons_has_produits` (
   CONSTRAINT `fk_livraisons_has_produits_produits1`
     FOREIGN KEY (`produits_id` )
     REFERENCES `mydb`.`produits` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-SHOW WARNINGS;
-
--- -----------------------------------------------------
--- Table `mydb`.`livraisons_has_etapes`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`livraisons_has_etapes` ;
-
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `mydb`.`livraisons_has_etapes` (
-  `livraisons_id` INT NOT NULL ,
-  `etapes_id` INT NOT NULL ,
-  `date` DATETIME NULL ,
-  INDEX `fk_livraisons_has_etapes_etapes1` (`etapes_id` ASC) ,
-  INDEX `fk_livraisons_has_etapes_livraisons1` (`livraisons_id` ASC) ,
-  CONSTRAINT `fk_livraisons_has_etapes_livraisons1`
-    FOREIGN KEY (`livraisons_id` )
-    REFERENCES `mydb`.`livraisons` (`id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_livraisons_has_etapes_etapes1`
-    FOREIGN KEY (`etapes_id` )
-    REFERENCES `mydb`.`etapes` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
