@@ -48,6 +48,14 @@ growlnotify -m "insert frais_de_port"
 echo "insert frais_de_port"
 mysql -h localhost --user=root --password=root < insert_frais_de_port.sql >> mysql.out
 
+growlnotify -m "insert commandes"
+echo "insert commandes"
+mysql -h localhost --user=root --password=root < insert_commandes.sql >> mysql.out
+
+growlnotify -m "insert commandes_has_produits"
+echo "insert commandes_has_produits"
+mysql -h localhost --user=root --password=root < insert_commandes_has_produits.sql >> mysql.out
+
 growlnotify -m "Tout est OK"
 echo "Tout est OK"
 growlnotify -m "Les logs sont dans mysql.out"
