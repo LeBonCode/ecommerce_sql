@@ -1,5 +1,5 @@
 use mydb;
-INSERT INTO `commandes_has_produits` (`commandes_id`,`produits_id`,`quantite`) 
+INSERT INTO `livraisons_has_produits` (`livraisons_id`,`produits_id`,`quantite`) 
 VALUES 	('1','1','3'),
 		('1','2','4'),
 
@@ -21,9 +21,9 @@ VALUES 	('1','1','3'),
 		('8','8','3'),
 		
 		('9','9','1'),
-		('9','100','1'),
+		('10','100','1'),
 		
-		('10','10','1'),
-		('10','50','1'),
-		('10','100','1');
+		('11','10','1'),
+		('12','50','1'),
+		('12','100','1');
 SHOW WARNINGS;
