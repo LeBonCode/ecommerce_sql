@@ -1,31 +1,42 @@
 #!/bin/bash
 
+if [ -d logs ] ; then
+	echo "logs trouvé"
+else
+	echo "logs non trouvé"
+	mkdir logs
+	echo "logs créé"
+fi
 rm logs/mysql.out && echo "logs effacés"
 
 if [ -d ddl ] ; then
-	echo "ddl found"
+	echo "ddl trouvé"
 	if [ -f ddl/create_tables.sql ] ; then
-		echo "create_tables.sql found"
+		echo "create_tables.sql trouvé"
 		if mysql -h localhost --user=root --password=root < ddl/create_tables.sql >> logs/mysql.out ; then
-			echo "schéma créé"
+			echo "tables créées"
 		else
-			echo "schéma non créé"
+			echo "tables non créées"
 			exit 1
 		fi
 	else
-		echo "create_tables.sql not found"
+		echo "create_tables.sql non trouvé"
 		exit 1
 	fi
 else
-	echo "ddl not found"
+	echo "ddl non trouvé"
 	exit 1
 fi
 
 if [ -d dml/insert ] ; then
-	echo "dml/insert found"
+	echo "dml/insert trouvé"
 	for file in dml/insert/insert_*.sql ; do
 		echo "$file"
-		mysql -h localhost --user=root --password=root < $file >> logs/mysql.out
+		if mysql -h localhost --user=root --password=root < $file >> logs/mysql.out ; then
+			echo "OK"
+		else
+			echo "KO"
+		fi
 	done
 else
 	exit 1
