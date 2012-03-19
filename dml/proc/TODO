@@ -1,0 +1,16 @@
+## Liste des procs ##
+Consultation du catalogue
+  => Donne les produits (nom, prix etc...) d'une categorie
+  => Donne les produits à mettre en avant
+  => Donne les produits en fonction d'une catégorie , d'une fourchette de prix ... (filtre)
+  C'est juste des SELECTS
+  
+sélection d'un ou plusieurs produits, en un ou plusieurs exemplaires, dans un "panier électronique"
+  => Panier c'est a peu près la commande dans notre schéma
+    Si la commande à un paiement on peut considérer qu'elle est validé
+    
+passage en caisse avec vidage du panier et calcul du montant à régler
+
+
+Remarque :
+Il faudra penser a dire quand on utilise les procs et ce qui est fait dans le code du site web
