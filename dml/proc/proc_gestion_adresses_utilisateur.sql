@@ -18,8 +18,8 @@ BEGIN
         END CASE;
 END|
 
-/*CALL gestion_adresses_utilisateur(3, 'get', null, null, null, null, null)|
-CALL gestion_adresses_utilisateur(5, 'add', null, '22', 'Rue du loup', '43200', 'Merignac', 1)|
+CALL gestion_adresses_utilisateur(3, 'get', null, null, null, null, null, null)|
+/*CALL gestion_adresses_utilisateur(5, 'add', null, '22', 'Rue du loup', '43200', 'Merignac', 1)|
 CALL gestion_adresses_utilisateur(6, 'edit', 64, 50, 'Les champs', '78500', 'Paris', 1)|
 CALL gestion_adresses_utilisateur(null, 'del', 22, null, null, null, null, null)|
 CALL gestion_adresses_utilisateur(6, 'get', null, null, null, null, null, null)|*/
