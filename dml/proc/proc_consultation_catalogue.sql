@@ -8,14 +8,17 @@ BEGIN
 	DECLARE cond VARCHAR(8000) DEFAULT "";
 	DECLARE cond_prix_inf VARCHAR(8000) DEFAULT "";
 	DECLARE cond_prix_sup VARCHAR(8000) DEFAULT "";
+	DECLARE orderby VARCHAR(8000) DEFAULT "";
+	DECLARE clauselimit VARCHAR(8000) DEFAULT "";
 	
 	SET @query = "SELECT * FROM produits p";
 	
     IF !ISNULL(nom_produit) THEN
 		SET cond = CONCAT("p.libelle LIKE '%",nom_produit,"%'");
     ELSEIF !ISNULL(page) THEN
-		SET offset := (page-1)*par_page;
-		SET cond = CONCAT("p.categories_id = categories_id LIMIT ", offset, ",", par_page);
+		SET offset = (page-1)*par_page;
+		SET cond = "p.categories_id = categories_id";
+		SET clauselimit = CONCAT(" LIMIT ", offset, ",", par_page);
     END IF;
 
 	IF !ISNULL(prix_inf) THEN
@@ -33,7 +36,10 @@ BEGIN
 	IF (cond != "" OR cond_prix_inf != "") AND cond_prix_sup != "" THEN
 		SET cond_prix_sup = CONCAT(" AND ", cond_prix_sup);
 	END IF;
-	SET @query = CONCAT(@query, " WHERE ", cond, cond_prix_inf, cond_prix_sup);
+	
+	SET orderby = " ORDER BY prix";
+	
+	SET @query = CONCAT(@query, " WHERE ", cond, cond_prix_inf, cond_prix_sup, orderby, clauselimit);
 
 	PREPARE stmt FROM @query;
 	EXECUTE stmt;
@@ -42,3 +48,7 @@ END|
 CALL consultation_catalogue(null,null,'bibendum',null,null)|
 CALL consultation_catalogue(1,2,null,null,null)|
 CALL consultation_catalogue(null,null,null,10,100)|
+CALL consultation_catalogue(null,null,null,50,null)|
+CALL consultation_catalogue(null,null,null,null,40)|
+CALL consultation_catalogue(null,null,'b',null,null)|
+CALL consultation_catalogue(null,null,'b',10,100)|
