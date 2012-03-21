@@ -16,9 +16,9 @@ BEGIN
 	END CASE;
 END|
 
-CALL gestion_adresses_utilisateur('add', 2, "rue des chats perchés", "33000", "Bordeaux", 1, 1, null)|
+CALL gestion_adresses_utilisateur('add', "2", "rue des chats perchés", "33000", "Bordeaux", 1, 1, null)|
 CALL gestion_adresses_utilisateur('get', null, null, null, null, null, 1, null)|
-CALL gestion_adresses_utilisateur('edit', 2, "rue des chats perchés", "33800", "Bordeaux", 1, 1, last_insert_id())|
+CALL gestion_adresses_utilisateur('edit', "2", "rue des chats perchés", "33800", "Bordeaux", 1, 1, last_insert_id())|
 CALL gestion_adresses_utilisateur('get', null, null, null, null, null, 1, null)|
 CALL gestion_adresses_utilisateur('del', null, null, null, null, null, null, last_insert_id())|
 CALL gestion_adresses_utilisateur('get', null, null, null, null, null, 1, null)|
