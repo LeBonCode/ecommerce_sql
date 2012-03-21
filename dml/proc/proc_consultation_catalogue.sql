@@ -26,14 +26,15 @@ BEGIN
 		SET cond_prix_sup = CONCAT(cond_prix_sup, " prix <= ", prix_sup);
 	END IF;
 	
-    IF cond != "" && cond_prix_inf != "" THEN
+	IF cond != "" AND cond_prix_inf != "" THEN
 		SET cond_prix_inf = CONCAT(" AND ", cond_prix_inf);
 	END IF;
-    IF cond != "" && cond_prix_sup != "" THEN
+    
+	IF (cond != "" OR cond_prix_inf != "") AND cond_prix_sup != "" THEN
 		SET cond_prix_sup = CONCAT(" AND ", cond_prix_sup);
 	END IF;
 	SET @query = CONCAT(@query, " WHERE ", cond, cond_prix_inf, cond_prix_sup);
-  select @query;
+
 	PREPARE stmt FROM @query;
 	EXECUTE stmt;
 END|
